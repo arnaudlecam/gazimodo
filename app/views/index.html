@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="todoList">
+  <head>
+    <base href="/" />
+    <meta charset="utf-8">
+    <title>Exemple Angular</title>
+    <link rel="stylesheet" href="styles.css" charset="utf-8">
+  </head>
+  <body ng-controller="MainController">
+    <header></header>
+
+    <div ng-view />
+
+    <script src="/vendor.js" charset="utf-8"></script>
+    <script src="/app.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      require('app').init();
+    </script>
+  </body>
+</html>
