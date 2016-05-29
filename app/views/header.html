@@ -1,7 +1,21 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Todo List</a>
+<nav class="navbar navbar-default" ng-controller="HeaderController as headerCtrl">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">HackTheData</a>
+        </div>
+
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="/board/{{headerCtrl.id}}" class="glyphicon glyphicon-dashboard"></a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/account/{{headerCtrl.id}}" class="glyphicon glyphicon-user"></a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
+
 </nav>

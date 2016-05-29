@@ -1,9 +1,8 @@
 (function () {
   'use strict';
 
-  var app = require('angular').module('todoList');
+  var app = require('angular').module('hackthedata');
 
-  app.service('UserService', './userService');
-  app.service('AuthService', './authService');
-  app.service('TaskService', './taskService');
+  app.service('UserService', require('./userService'));
+  app.service('DashboardService', require('./dashboardService'));
 }());

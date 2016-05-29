@@ -1,6 +1,6 @@
 (function () {
   'use strict';
-  var app = require('angular').module('todoList');
+  var app = require('angular').module('hackthedata');
 
   app.directive('header', require('./header'));
 
@@ -17,4 +17,6 @@
       }
     };
   });
+
+  require('./chart');
 }());

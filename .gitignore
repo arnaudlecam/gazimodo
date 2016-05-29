@@ -21,7 +21,11 @@ coverage
 .lock-wscript
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
+<<<<<<< HEAD
 build
+=======
+build/Release
+>>>>>>> 390930c4a71ca6975612a9e25d46020c1f0f568f
 
 # Dependency directory
 node_modules
@@ -31,9 +35,12 @@ node_modules
 
 # Optional REPL history
 .node_repl_history
+<<<<<<< HEAD
 
 # assets fonts because they are copying from bootstrap dependency
 app/assets/fonts/glyphicons-*
 
 # Brunch output
 public
+=======
+>>>>>>> 390930c4a71ca6975612a9e25d46020c1f0f568f

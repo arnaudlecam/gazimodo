@@ -1,0 +1,53 @@
+<div>
+  <h1>Compte</h1>
+    <form>
+      <div class="form-group">
+          <label for="nomTxt">Nom</label>
+          <input type="text" class="form-control" id="nomTxt" ng-model="controller.nom">
+      </div>
+      <div class="form-group">
+          <label for="nbAboTxt">Prénom</label>
+          <input type="text" class="form-control" id="nbAboTxt" ng-model="controller.prenom">
+      </div>
+        <div class="form-group">
+            <label for="nbAboTxt">N° abonné</label>
+            <input type="text" class="form-control" id="nbAboTxt" ng-model="controller.nbAbonne">
+        </div>
+        <div class="form-group">
+            <label for="communeTxt">Commune</label>
+            <input type="text" class="form-control" id="communeTxt" ng-model="controller.commune">
+        </div>
+        <div class="form-group">
+            <label for="surface">Surface</label>
+            <input type="number" placeholder="m2" ng-model="controller.surface">
+        </div>
+        <div class="form-group">
+            <label>Usage</label>
+            <label class="checkbox-inline">
+                <input type="checkbox" ng-model="controller.aChauffage"> Chauffage
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" ng-model="controller.aEauChaude"> Eau chaude
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" ng-model="controller.aCuisson"> Cuisson
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="typeLogementTxt">Type de logement</label>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="maison" ng-model="controller.typeLogement"> Maison
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="appartement" ng-model="controller.typeLogement"> Appartement
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="nbOccupantTxt">Nombre d'occupants</label>
+            <input type="number" ng-model="controller.nbOccupants">
+        </div>
+    </form>
+    <button type="button" class="btn btn-success" ng-click="controller.save()"><span class="glyphicon glyphicon-ok"></span></button>
+    <button type="button" class="btn btn-danger" ng-click="controller.undo()"><span class="glyphicon glyphicon-remove"></span></button>
+
+</div>

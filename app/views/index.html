@@ -1,20 +1,86 @@
 <!DOCTYPE html>
-<html ng-app="todoList">
-  <head>
+<html ng-app="hackthedata">
+
+<head>
     <base href="/" />
     <meta charset="utf-8">
     <title>Exemple Angular</title>
     <link rel="stylesheet" href="styles.css" charset="utf-8">
-  </head>
-  <body ng-controller="MainController">
+</head>
+
+<body ng-controller="MainController as mainCtrl">
     <header></header>
 
-    <div ng-view />
+    <div class="alert alert-info" role="alert">
+        <strong>Infos!</strong> Vous pouvez remplir quelques informations pour que nous puissions vous aider à optimiser votre consommation
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#profilModal">
+          <span class="glyphicon glyphicon-info-sign"></span>
+        </button>
+    </div>
+
+    <div id="profilModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Veuillez renseigner votre profil</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="nbAboTxt">N° abonné</label>
+                            <input type="text" class="form-control" id="nbAboTxt" ng-model="mainCtrl.nbAbonne">
+                        </div>
+                        <div class="form-group">
+                            <label for="communeTxt">Commune</label>
+                            <input type="text" class="form-control" id="communeTxt" ng-model="mainCtrl.commune">
+                        </div>
+                        <div class="form-group">
+                            <label for="surface">Surface</label>
+                            <input type="number" placeholder="m2" ng-modal="mainCtrl.surface">
+                        </div>
+                        <div class="form-group">
+                            <label>Usage</label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" ng-model="mainCtrl.aChauffage"> Chauffage
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" ng-model="mainCtrl.aEauChaude"> Eau chaude
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" ng-model="mainCtrl.aCuisson"> Cuisson
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="typeLogementTxt">Type de logement</label>
+                            <label class="radio-inline">
+                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="maison" ng-model="mainCtrl.typeLogement"> Maison
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="appartement" ng-model="mainCtrl.typeLogement"> Appartement
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="nbOccupantTxt">Nombre d'occupants</label>
+                            <input type="number" ng-model="mainCtrl.nbOccupants">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal" ng-click="mainCtrl.saveSurvey()"><span class="glyphicon glyphicon-ok"></span></button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-panel" ng-view />
 
     <script src="/vendor.js" charset="utf-8"></script>
     <script src="/app.js" charset="utf-8"></script>
     <script type="text/javascript">
-      require('app').init();
+        require('app').init();
     </script>
-  </body>
+</body>
+
 </html>
