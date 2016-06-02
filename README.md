@@ -1,5 +1,8 @@
 # exemple_angular
 
+##Presentation :
+https://prezi.com/t-20cnfyohtd/gazimodo-hackathon-grdf-hackthedatas-saint-brieuc-mai-2016/
+
 ## Features
 
  - AngularJS Front-end
